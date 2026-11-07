@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found | X STORE</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#080808">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&family=Montserrat:wght@400;600;700&family=Orbitron:wght@800&display=swap" rel="stylesheet">
+  <!-- 404 pages can be served from any URL depth on GitHub Pages, so base is computed in JS. -->
+  <script>
+    (function () {
+      var parts = location.pathname.split("/").filter(Boolean);
+      var isProject = location.hostname.endsWith("github.io") && parts.length > 0;
+      var base = isProject ? "/" + parts[0] + "/" : "/";
+      document.write('<base href="' + base + '">');
+    })();
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/language.js"></script>
+</head>
+<body data-page="404">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img class="brand-logo" src="images/logo-icon.png" width="44" height="44" alt=""><span class="brand-text">X <b>STORE</b></span></a>
+      <div class="header-actions">
+        <button class="lang-btn" type="button" data-lang-toggle data-i18n="nav.lang.btn" data-i18n-attr="aria-label:nav.lang.label" aria-label="Switch language to Arabic">العربية</button>
+      </div>
+    </div>
+  </header>
+  <main class="error-page">
+    <div>
+      <h1 class="error-code display gold-text">404</h1>
+      <h2 data-i18n="e404.title">Page not found</h2>
+      <p style="color:var(--muted);max-width:460px;margin:0 auto 28px" data-i18n="e404.text">The page you are looking for does not exist or has been moved.</p>
+      <a class="btn btn-primary" href="index.html" data-i18n="e404.btn">Back to home</a>
+    </div>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="js/main.js"></script>
+</body>
+</html>
